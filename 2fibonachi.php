@@ -1,11 +1,18 @@
 <?php
-//Вывести определенное количество элементов  последовательности Фибоначчи
-	
-$a = 40;
-$arr = [0, 1];
+//Вывести определенное количество элементов последовательности Фибоначчи
 
-for ($b = 0; $b < $a-2; $b++) {
-	$arr[] = $arr[$b+1] + $arr[$b];
+class Fibonachi 
+{
+
+	function new_fibonachi($a)
+	{
+		$arr = [0, 1];
+		for ($b = 0; $b < $a-2; $b++) {
+			$arr[] = $arr[$b+1] + $arr[$b];
+			}
+		 return $arr;
 	}
-var_dump ($arr);
+}
+$obj = new Fibonachi;
+var_dump($obj->new_fibonachi("10"));
 ?>
